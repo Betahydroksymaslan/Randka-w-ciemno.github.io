@@ -1,0 +1,130 @@
+
+
+.wrapper {
+    margin: 20px;
+    width: 550px;
+    height: 525px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+}
+
+.section__divForExamples {
+    text-align: center;
+    border: 2px solid gray;
+    position: relative;
+    margin: 0 3%;
+    
+}
+
+.section__header,
+.section__h3 {
+    text-align: center;
+    font-weight: lighter;
+}
+
+.section__header::before,
+.section__header::after {
+    content: '_';
+    font-weight: bold;
+    font-size: 30px;
+    color: red;
+}
+
+.sectionColorSpan {
+    color: rgb(233, 115, 115);
+    margin: 0 5px;
+    animation: 2s infinite linear spanColor;
+}
+
+@keyframes spanColor {
+    0% {
+        color: rgb(233, 115, 115);
+    }
+    50% {
+        color: seagreen;
+    }
+    80% {
+        color: slateblue;
+    }
+    100% {
+        color: rgb(233, 115, 115);
+    }
+}
+
+.gameTest {
+    padding: 15px 20px;
+    background-color: transparent;
+    border: 2px solid black;
+    outline: none;
+    position: relative;
+}
+
+.gameTest:hover {
+    cursor: pointer;
+}
+
+.buttonSpanTop,
+.buttonSpanBot {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    transition: transform .5s ease-in;
+}
+
+.buttonSpanTop {
+    top: -2px;
+    left: -32px;
+}
+
+.buttonSpanLeft {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 2px;
+    background-color: white;
+    top: -22px;
+    left: -2px;
+    transition: transform .5s ease-in;
+}
+
+.buttonSpanBot {
+    bottom: -2px;
+    right: -32px;
+}
+
+.buttonSpanRight {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 2px;
+    background-color: white;
+    bottom: -22px;
+    right: -2px;
+    transition: transform .5s ease-in;
+}
+
+.gameTest:hover .buttonSpanTop {
+    transform: translateX(125px);
+}
+.gameTest:hover .buttonSpanBot {
+    transform: translateX(-125px);
+}
+.gameTest:hover .buttonSpanLeft {
+    transform: translateY(70px);
+}
+.gameTest:hover .buttonSpanRight {
+    transform: translateY(-70px);
+}
+
+.containerForButtons {
+    display: flex;
+    justify-content: space-evenly;
+}

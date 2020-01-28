@@ -1,0 +1,185 @@
+.contentPosition {
+    justify-content: start;
+}
+
+.h3Position {
+    margin-top: 10px;
+}
+
+.trueInput,
+.falseInput {
+    margin: 10px auto 30px auto;
+    width: 70%;
+    height: 35px;
+    text-align: center;
+    border: 1px solid rgb(59, 57, 57);
+    font-size: 20px;
+    font-family: 'Marck Script', cursive;
+    outline: none;
+}
+
+.trueInput {
+    background-color: rgba(210, 245, 210, 0.671);
+}
+
+.trueInput:hover,
+.trueInput:focus {
+    background-color: rgb(179, 233, 179);
+}
+
+.falseInput {
+    background-color: rgba(245, 206, 206, 0.685);
+}
+
+.falseInput:hover,
+.falseInput:focus {
+    background-color: rgb(238, 185, 185);
+}
+
+.nextBtn {
+    padding: 10px 20px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid black;
+    margin-top: 20px;
+    transition: all .3s ease;
+}
+
+.nextBtn:hover {
+    cursor: pointer;
+    background-color: rgb(241, 234, 234);
+    transform: scale(1.1);
+    font-weight: bold;
+    border: 1px solid rgb(126, 119, 119);
+    color: rgb(126, 119, 119);
+}
+
+.gameDiv--position {
+    justify-content: center;
+}
+
+/* !!!!! OBSŁUGA BŁĘDU !!!!!! */ 
+
+
+.transparentDivForError {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.errorDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 150px;
+    border: 1px solid black;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px gray;
+    transition: transform .3s ease;
+}
+
+.errorAccept {
+    transition: all .3s ease;
+}
+
+.errorAccept:hover {
+    cursor: pointer;
+    color: rgb(56, 161, 56);
+    transform: scale(1.1);
+
+}
+
+.errorDivRemove {
+    transform: scale(.00001);
+}
+
+.errorText {
+    text-align: center;
+}
+
+/* !!!!! MIĘDZYFAZA !!!!!! */ 
+
+.interphase {
+    justify-content: center;
+    
+    box-shadow: inset 0 0 7px black,
+                0 0 15px gray; 
+}
+
+.startGameButton {
+    padding: 20px 30px;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(235, 160, 160);
+    border-right: 2px solid rgb(235, 160, 160);
+    border-top: 2px solid rgb(148, 216, 148);
+    border-left: 2px solid rgb(148, 216, 148);
+    transition: all .4s ease;
+}
+
+.startGameButton:hover {
+    cursor: pointer;
+    border-top: 2px solid rgb(235, 160, 160);
+    border-left: 2px solid rgb(235, 160, 160);
+    border-bottom: 2px solid rgb(148, 216, 148);
+    border-right: 2px solid rgb(148, 216, 148);
+    transform: scale(1.2);
+    background-color: rgb(243, 233, 233);
+    box-shadow: 0 0 40px rgb(211, 205, 205);
+}
+
+.opacity {
+    opacity: 0;
+}
+
+.loadingDiv {
+    animation: 2s ease infinite spinner,
+                3s ease infinite colorSpinner;
+    transition: opacity 1s ease;
+    font-size: 50px;
+}
+
+@keyframes spinner {
+    100% {
+        transform: rotate(360deg) ;
+    }
+}
+
+@keyframes colorSpinner {
+    0% {
+        color: rgb(241, 126, 126);
+    }
+    20% {
+        color: rgb(233, 198, 43);
+    }
+    40% {
+        color: rgb(129, 236, 58);
+    }
+    60% {
+        color: rgb(103, 106, 235);
+    }
+    80% {
+        color: rgb(218, 56, 132);
+    }
+    100% {
+        color: rgb(228, 116, 116);
+    }
+}
+
+.whiteDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+

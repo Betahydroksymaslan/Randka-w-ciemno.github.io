@@ -1,0 +1,121 @@
+.demoDiv {
+    width: 85%;
+    height: 80%;
+    background-color: white;
+    border: 2px solid gray;
+    box-shadow: 0 0 10px gray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease;
+}
+
+.trueDiv {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    text-align: center;
+    transition: .3s ease;
+}
+
+.trueDiv:hover {
+    cursor: pointer;
+    color: #E5C100;
+    letter-spacing: 1px;
+}
+
+.transparentDivForQuestions {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.percentage {
+    margin-top: 30px;
+    font-size: 20px;
+    transition: transform .5s ease;
+    margin-bottom: 0;
+}
+
+.fa-heart {
+    color: red;
+    margin-top: 25px;
+    animation: 2s ease infinite changeColor,
+                1s ease infinite pulsation;
+    transition: transform .3s ease;
+}
+
+@keyframes changeColor {
+    0% {
+        color: red;
+    }
+    50% {
+        color: rgb(221, 133, 133);
+    }
+    100% {
+        color: red;
+    }
+}
+
+@keyframes pulsation {
+    form {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.3);
+    }
+}
+
+.heartTranslate {
+    transform: translateY(-100px);
+}
+
+.divForPercAndHeart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform .5s ease;
+    margin-top: 20px;
+}
+
+.resultDiv {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    width: 70%;
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.reOpacity {
+    opacity: 1;
+}
+
+.exit {
+    font-size: 60px;
+    font-weight: bold;
+    transform: rotate(-225deg);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    transition: all .7s ease;
+    opacity: 0;
+}
+
+.exit:hover {
+    cursor: pointer;
+    transform: rotate(-45deg) scale(1.2);
+    color: rgb(240, 107, 107);
+}
